@@ -348,26 +348,25 @@
 
     /* -------------------- Identity Generalization -------------------- */
 
-    #identity-generalization {
-      background: var(--surface);
-    }
-
     .identity-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 10px;
+  row-gap: 28px;
+}
 
-    .identity-grid video {
-      background: #111;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+.identity-grid video {
+  width: 88%;
+  height: auto;
+  margin: 0 auto;
+  background: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .identity-grid video:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(31, 36, 48, 0.10);
-    }
-
+.identity-grid video:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(31, 36, 48, 0.10);
+}
     /* -------------------- Multiview -------------------- */
 
     #multiview-rendering {
