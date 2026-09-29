@@ -170,121 +170,64 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
   </div>
 </section>
 
-<section class="hero is-small project-section" id="results">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-
-          <h2 class="title is-3">Results</h2>
-
-          <div class="content">
-
-            <!-- ==================== 第一行 ==================== -->
-            <div class="columns is-centered">
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_10_kieks_0_4_4.mp4" type="video/mp4">
-                </source></video>
-              </div>
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_12_zhao_0_81_81.mp4" type="video/mp4">
-                </source></video>
-              </div>
-            </div>
-
-            <!-- ==================== 第二行 ==================== -->
-            <div class="columns is-centered">
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_1_wayne_0_1_1.mp4" type="video/mp4">
-                </source></video>
-              </div>
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_20_li_0_81_81.mp4" type="video/mp4">
-                </source></video>
-              </div>
-            </div>
-
-            <!-- ==================== 第三行 ==================== -->
-            <div class="columns is-centered">
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_28_tiffnay_0_87_87.mp4" type="video/mp4">
-                </source></video>
-              </div>
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_2_scott_0_73_73.mp4" type="video/mp4">
-                </source></video>
-              </div>
-            </div>
-
-            <!-- ==================== 第四行 ==================== -->
-            <div class="columns is-centered">
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_3_solomon_0_8_8.mp4" type="video/mp4">
-                </source></video>
-              </div>
-              <div class="column is-half has-text-centered">
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/res_3_solomon_0_8_8.mp4" type="video/mp4">
-                </source></video>
-              </div>
-            </div>
-
-          </div>
-
-          <p>
-            The experimental results of our proposed model. The videos showcase how our
-            approach produces realistic and consistent co-speech gestures, with smooth
-            upper-body movements and expressive hand dynamics, aligned with the
-            corresponding speech input.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
   
-<section class="hero is-small project-section" id="comparison">
+<section class="hero is-small project-section" id="2D_comparison">
   <div class="hero-body">
     <div class="container is-max-widescreen">
 
       <h2 class="title is-3 has-text-centered">
-        Comparison on BEAT2
+        2D_Comparison
       </h2>
 
       <div id="results-carousel" class="carousel results-carousel">
 
         <div class="item item-video1">
           <video id="video1" autoplay controls muted loop playsinline preload="metadata">
-            <source src="static/videos/cat_2_scott_0_1_1.mp4" type="video/mp4">
+            <source src="static/videos/2D_comparison/Seth.mp4" type="video/mp4">
           </source></video>
         </div>
 
         <div class="item item-video2">
           <video id="video2" autoplay controls muted loop playsinline preload="metadata">
-            <source src="static/videos/cat_2_scott_0_2_2.mp4" type="video/mp4">
+            <source src="static/videos/2D_comparison/Oliver.mp4" type="video/mp4">
           </source></video>
         </div>
 
-        <div class="item item-video3">
-          <video id="video3" autoplay controls muted loop playsinline preload="metadata">
-            <source src="static/videos/cat_2_scott_0_3_3.mp4" type="video/mp4">
+      </div>
+
+      <h2 class="content has-text-centered">
+        Qualitative results compared with other methods.
+        Our method achieves accurate gesture generation
+        and high-quality overall visuals.
+      </h2>
+
+    </div>
+  </div>
+</section>
+
+
+          <section class="hero is-small project-section" id="3D_comparison">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+
+      <h2 class="title is-3 has-text-centered">
+        3D_Comparison
+      </h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-video1">
+          <video id="video1" autoplay controls muted loop playsinline preload="metadata">
+            <source src="static/videos/2D_comparison/Brett.mp4" type="video/mp4">
           </source></video>
         </div>
 
-        <div class="item item-video4">
-          <video id="video4" autoplay controls muted loop playsinline preload="metadata">
-            <source src="static/videos/cat_2_scott_0_4_4.mp4" type="video/mp4">
+        <div class="item item-video2">
+          <video id="video2" autoplay controls muted loop playsinline preload="metadata">
+            <source src="static/videos/2D_comparison/Ellen.mp4" type="video/mp4">
           </source></video>
         </div>
 
@@ -306,7 +249,7 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
       <div class="columns is-centered has-text-centered">
         <div class="column">
 
-          <h2 class="title is-3">Arbitrary Speech-Driven Generation</h2>
+          <h2 class="title is-3">Identity Generalization</h2>
 
           <div class="content">
 
@@ -314,12 +257,12 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
             <div class="columns is-centered">
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/segment_5_9miranda.mp4" type="video/mp4">
+                  <source src="static/videos/Identity_generalization/bee.mp4" type="video/mp4">
                 </source></video>
               </div>
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/aud_novel_kirs.mp4" type="video/mp4">
+                  <source src="static/videos/Identity_generalization/colbert.mp4" type="video/mp4">
                 </source></video>
               </div>
             </div>
@@ -328,12 +271,12 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
             <div class="columns is-centered">
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/aud_novel_lieu.mp4" type="video/mp4">
+                  <source src="static/videos/Identity_generalization/fallon.mp4" type="video/mp4">
                 </source></video>
               </div>
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/aud_novel_obama.mp4" type="video/mp4">
+                  <source src="static/videos/Identity_generalization/lec.mp4" type="video/mp4">
                 </source></video>
               </div>
             </div>
@@ -342,12 +285,12 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
             <div class="columns is-centered">
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/aud_novel_shaheen.mp4" type="video/mp4">
+                  <source src="static/videos/Identity_generalization/corden.mp4" type="video/mp4">
                 </source></video>
               </div>
               <div class="column is-half has-text-centered">
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/Englishp16_6carla.mp4" type="video/mp4">
+                  <source src=static/videos/Identity_generalization/seth.mp4" type="video/mp4">
                 </source></video>
               </div>
             </div>
