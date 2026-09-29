@@ -130,7 +130,7 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
            ">  
 
         <p>  
-          {Overview of EchoAvatar. Speech content and emotion features jointly condition a Transformer to predict facial, hand, and upper-body motion. A single reference image supplies body shape and appearance features for c
+          Overview of EchoAvatar. Speech content and emotion features jointly condition a Transformer to predict facial, hand, and upper-body motion. A single reference image supplies body shape and appearance features for c
           onstructing a canonical Gaussian avatar on the UniTopo-X scaffold. PAN adapts the predicted motion to the target body geometry, while emotion features directly condition appearance refinement 
           to complement motion-driven Gaussian rendering. Snowflakes and flames indicate frozen and trainable components, respectively. Black arrows denote data flow; the red arrow marks offline FLAME--SMPL-X correspondence construction.
         </p>  
@@ -199,9 +199,10 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
       </div>
 
       <h2 class="content has-text-centered">
-        Qualitative results compared with other methods.
-        Our method achieves accurate gesture generation
-        and high-quality overall visuals.
+        Comparison with representative 2D audio-driven avatar animation
+            methods. For each example, the first column shows the input
+            reference image, followed by the generated results of different
+            methods under the same driving audio.
       </h2>
 
     </div>
@@ -234,9 +235,10 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
       </div>
 
       <h2 class="content has-text-centered">
-        Qualitative results compared with other methods.
-        Our method achieves accurate gesture generation
-        and high-quality overall visuals.
+        Comparison with representative 3D avatar animation methods.
+            All methods are driven by the same predicted motion sequence.
+            The first column shows the driving motion, followed by the
+            rendered avatar results produced by different methods.
       </h2>
 
     </div>
@@ -297,7 +299,9 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
 
 
           <p>
-            Given an arbitrary speech input unseen during training, our method generates natural and semantically coherent co-speech gestures.
+           EchoAvatar generalizes to diverse unseen identities using only
+            a single reference image at inference time, without
+            subject-specific optimization.
           </p>
 
         </div>
@@ -324,7 +328,11 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
 
               </div>
             </div>
-
+<p>
+          Multi-view rendering results demonstrate that EchoAvatar
+            maintains coherent appearance and 3D structure across different
+            camera viewpoints.
+          </p>
           </div>
 
 
