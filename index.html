@@ -312,6 +312,7 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
 <section class="hero is-small project-section" id="demo">
   <div class="hero-body">
     <div class="container">
+
       <div class="columns is-centered has-text-centered">
         <div class="column">
 
@@ -320,24 +321,36 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
           <div class="content">
 
             <div class="columns is-centered">
-              <div class="column is-three-quarters has-text-centered">
+              <div class="column is-full has-text-centered">
 
-                <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/Multiview_rendering/result.mp4" type="video/mp4">
-                </source></video>
+                <video
+                  class="multiview-video"
+                  poster=""
+                  playsinline
+                  autoplay
+                  muted
+                  loop
+                  controls
+                  preload="metadata">
+                  <source
+                    src="static/Multiview_rendering/result.mp4"
+                    type="video/mp4">
+                </video>
 
               </div>
             </div>
-<p>
-          Multi-view rendering results demonstrate that EchoAvatar
-            maintains coherent appearance and 3D structure across different
-            camera viewpoints.
-          </p>
-          </div>
 
+            <p class="multiview-description">
+              Multi-view rendering results demonstrate that EchoAvatar
+              maintains coherent appearance and 3D structure across different
+              camera viewpoints.
+            </p>
+
+          </div>
 
         </div>
       </div>
+
     </div>
   </div>
 </section>
