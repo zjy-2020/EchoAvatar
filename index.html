@@ -137,13 +137,14 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
              ">  
  
           <p>  
-            Co-speech gesture generation has made substantial progress in motion quality and speech--motion synchronization, yet existing methods largely focus on direct speech-to-motion mapping or position-wise semantic relevance, 
-            leaving the temporal evolution of semantically relevant gestures over upcoming intervals underexplored. We propose PlanTalk, a hierarchical speech-to-plan-to-motion framework that introduces discrete motion plans to organize 
-            short-horizon body-motion evolution. During pretraining, a future motion-plan tokenizer learns to encode and reconstruct temporally ordered windows of subsequent body-motion tokens, excluding the current token. The resulting 
-            discrete representations serve as motion plans that summarize upcoming motion evolution rather than a single future state. A speech-to-plan predictor learns to infer these plans from speech-semantic features without accessing 
-            future motion at inference. The predicted plans guide body-motion generation through two complementary mechanisms: an event-aware semantic gate refines <em>when</em> semantically relevant motion is activated, while hierarchical 
-            plan-conditioned feature-wise linear modulation (FiLM) modulates <em>how</em> the plan is realized across shared body, body-part, and motion-token representations. Experiments 
-            on BEAT2 demonstrate improvements in motion quality, speech--motion synchronization, diversity, and semantic relevance. Zero-shot evaluation on SHOW further demonstrates the cross-dataset generalization of the proposed framework.
+            Generating expressive 3D avatars from a single reference image and driving speech requires both body-compatible motion and appearance that responds appropriately to emotion-related acoustic cues. 
+            Existing approaches typically emphasize either explicit motion control or photorealistic video synthesis, leaving the interaction among speech-driven motion, target-body geometry, and expressive 
+            appearance insufficiently modeled. We present EchoAvatar, a framework that addresses these issues through shape-conditioned motion adaptation and emotion-conditioned 3D Gaussian rendering. 
+            Its geometric foundation, UniTopo-X, transfers FLAME facial deformations onto the original SMPL-X topology, preserving surface correspondences across facial animation, body articulation, and Gaussian deformation. 
+            Speech content and acoustic emotion jointly guide the prediction of facial, hand, and upper-body motion. A lightweight Pose Adaptation Network adjusts this motion to the target body shape through residual corrections. 
+            Acoustic emotion features also directly condition the neural appearance refiner, allowing affective cues to influence rendering beyond their contribution to motion. On the PATS dataset, 
+            EchoAvatar achieves a Fréchet Gesture Distance of 3.92 on motion recovered from generated videos, a lip-synchronization confidence of 9.85, an identity cosine similarity of 0.646, 
+            and a Fréchet Video Distance of 166.21. Zero-shot evaluation on the TED dataset further supports cross-dataset robustness, while component analyses and human evaluation support the geometric adaptation and expressive rendering design.
           </p>  
  
         </div> 
@@ -162,8 +163,8 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
     <div class="hero-body" style="padding-left: 0; padding-right: 0;">  
 
       <center>  
-        <img src="static/teaser.png" 
-             alt="PlanTalk Framework Pipeline" 
+        <img src="static/images/pipelines2_01.png" 
+             alt="EchoAvatar Framework Pipeline" 
              style="width: 100%; max-width: 2400px;">  
       </center>  
         
@@ -179,14 +180,9 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
            ">  
 
         <p>  
-          Overview of PlanTalk. Stage I learns a motion-grounded discrete future-plan vocabulary  
-          from offset future body-motion windows and freezes the pretrained tokenizer and codebook.  
-          In Stage II, a speech-to-plan predictor infers discrete plans from speech-semantic features  
-          using the frozen codebook, while the facial stream remains directly speech-conditioned.  
-          The predicted plans guide body-motion generation through an event-aware semantic gate for  
-          when semantic motion is activated and hierarchical plan-conditioned FiLM for how the planned  
-          motion is realized. Future motion is required only for plan supervision during training,  
-          not at inference.  
+          {Overview of EchoAvatar. Speech content and emotion features jointly condition a Transformer to predict facial, hand, and upper-body motion. A single reference image supplies body shape and appearance features for c
+          onstructing a canonical Gaussian avatar on the UniTopo-X scaffold. PAN adapts the predicted motion to the target body geometry, while emotion features directly condition appearance refinement 
+          to complement motion-driven Gaussian rendering. Snowflakes and flames indicate frozen and trainable components, respectively. Black arrows denote data flow; the red arrow marks offline FLAME--SMPL-X correspondence construction.
         </p>  
 
       </div>  
@@ -209,7 +205,7 @@ video{display:block;width:100%;height:auto;max-width:100%;background:#f4f4f6;bor
               <div class="column is-three-quarters has-text-centered">
 
                 <video poster="" playsinline autoplay muted loop controls preload="metadata">
-                  <source src="static/videos/PlanTalk_Demo_v2.mp4" type="video/mp4">
+                  <source src="static/videos/EchoAvatar_Demo.mp4" type="video/mp4">
                 </source></video>
 
               </div>
